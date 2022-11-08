@@ -8,7 +8,7 @@ const Header = () => {
        
     </>
     return (
-        <div className="navbar h-20 mb-12 pt-12 bg-base-100">
+        <div data-theme="night" className="navbar h-50  pt-12 bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -20,9 +20,9 @@ const Header = () => {
                 </div>
                 <div className='flex'>
                     <Link to="/" className="btn btn-ghost normal-case text-xl">
-                        <img className='w-14' src={logo} alt="" />
+                        <img className='w-14 pb-5' src={logo} alt="" />
                     </Link>
-                    <h2 className='text-xl font-bold pt-3'>DENTREXA</h2>
+                    <h2 className='text-xl font-bold '>DENTREXA</h2>
                 </div>
 
             </div>
