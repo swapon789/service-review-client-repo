@@ -15,7 +15,7 @@ const ServiceItem = () => {
                 <h2 className='text-2xl font-bold '>Introduce Services</h2>
                 <p>Please come the care and see the services</p>
             </div>
-            <div className='grid md:grid-cols-3  mx-10 gap-8 lg:grid-cols-3 sm:grid-cols-1'>
+            <div className='grid md:grid-cols-2  mx-10 gap-8 lg:grid-cols-3 sm:grid-cols-1'>
                 {
                     services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
