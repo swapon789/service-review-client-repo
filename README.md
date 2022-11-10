@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Getting Started with Dental Expert
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+1.A home Page this page ar showing a home section and header section
+2.A about sectio added under the home section
+3.Dynamicali input a service section and showing their details a different page
+4.Add e Equipment gallery and Comunication adress
+5.Register User and Login then into the access to add a service item and inpt a review in a treatment
+6.The review page ar showing some input item then user if can update or delet they can do it 
+7.When a user is not access before they could not access the review and other work
+
 
 ### `npm start`
 

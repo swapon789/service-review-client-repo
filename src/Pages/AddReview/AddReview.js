@@ -3,6 +3,7 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../useTitle';
 
 
+
 const AddReview = () => {
     const { user } = useContext(AuthContext);
     useTitle("AddReview")
@@ -47,7 +48,8 @@ const AddReview = () => {
 
     }
     return (
-        <section data-theme="aqua" className="p-6 my-6 rounded-lg  text-white">
+      <div>
+          <section data-theme="aqua" className="p-6 my-6 rounded-lg  text-white">
             <form onSubmit={handleAddReview} className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm ">
                     <div className="space-y-2 col-span-full lg:col-span-1">
@@ -89,6 +91,7 @@ const AddReview = () => {
 
             </form>
         </section>
+      </div>
     );
 };
 
