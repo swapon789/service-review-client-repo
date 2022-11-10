@@ -55,7 +55,7 @@ const Login = () => {
                 }
                 console.log(currentUser);
 
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://y-iota-ruddy.vercel.app/jwt', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

@@ -24,7 +24,7 @@ const AddService = () => {
             charge:charge
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://y-iota-ruddy.vercel.app/services', {
             method:"POST",
             headers:{
                 "content-type":"application/json"

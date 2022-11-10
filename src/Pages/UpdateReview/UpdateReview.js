@@ -10,7 +10,7 @@ const UpdateReview = () => {
 
     const handlerStateUpdate = (event) => {
         event.preventDefault()
-        fetch(`http://localhost:5000/review/${storeUser?._id}`, {
+        fetch(`https://y-iota-ruddy.vercel.app/review/${storeUser?._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

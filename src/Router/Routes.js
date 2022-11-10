@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import AddReview from "../Pages/AddReview/AddReview";
 import AddService from "../Pages/AddService/AddService";
 import Blogs from "../Pages/Blogs/Blogs";
+import Fourpage from "../Pages/Fourpage/Fourpage";
 import About from "../Pages/Home/About/About";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement:<Fourpage></Fourpage>,
         children:[
             {
                 path:'/',
@@ -55,7 +57,7 @@ export const router = createBrowserRouter([
             {
                 path:'/servicesDetails/:id',
                 element:<ServicesDetails></ServicesDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params}) => fetch(`https://y-iota-ruddy.vercel.app/services/${params.id}`)
             },
             {
                 path:'/addreview',
@@ -68,7 +70,7 @@ export const router = createBrowserRouter([
             {
                 path:'/update/:id',
                 element:<UpdateReview></UpdateReview>,
-                loader:({params}) => fetch(`http://localhost:5000/review/${params.id}`)
+                loader:({params}) => fetch(`https://y-iota-ruddy.vercel.app/review/${params.id}`)
             }
         ]
     }

@@ -14,7 +14,7 @@ const Review = () => {
         if (!user?.email) {
             return;
         }
-        fetch(`http://localhost:5000/review?email=${user?.email}`, {
+        fetch(`https://y-iota-ruddy.vercel.app/review?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem("dentrexatoken")}`
             }
@@ -29,7 +29,7 @@ const Review = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are you want to sure cancell this order")
         if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://y-iota-ruddy.vercel.app/review/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
