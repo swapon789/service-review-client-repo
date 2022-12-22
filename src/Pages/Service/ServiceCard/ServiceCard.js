@@ -16,7 +16,7 @@ const ServiceCard = ({ service }) => {
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
                 <p>{service?.details?.length > 200 ?
-                    service?.details?.slice(0, 100) + '...' : <p>not found</p>
+                    service?.details?.slice(0, 100) + '...' : <p>{details}</p>
                 }</p>
                 <div className='flex'>
                     <p className='flex '>Rating:  <FaStar></FaStar>{ratings}</p>

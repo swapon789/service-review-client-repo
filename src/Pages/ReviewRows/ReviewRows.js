@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FaStarHalfAlt } from "react-icons/fa";
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import { Td, Tr } from 'react-super-responsive-table';
 import useTitle from '../../useTitle';
 
 
-const ReviewRows = ({ review, handleDelete, hadleStatusUpdate }) => {
+const ReviewRows = ({ review, handleDelete, }) => {
     useTitle("Review");
     const { _id, Patient, photo, ratings, description, email,} = review;
 
@@ -31,11 +30,7 @@ const ReviewRows = ({ review, handleDelete, hadleStatusUpdate }) => {
             <Td>
                 <span className="badge badge-ghost badge-sm"> <FaStarHalfAlt></FaStarHalfAlt> {ratings}</span>
             </Td>
-            <Td>
-                <Link to={`/update/${_id}`}>
-                    <button className='btn btn-sm'>Update</button>
-                </Link>
-            </Td>
+            
             <Td>
                 <button onClick={() => handleDelete(_id)} className="btn btn-sm">Delete</button>
             </Td>

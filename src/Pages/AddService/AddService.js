@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-hot-toast';
 import useTitle from '../../useTitle';
 
 
@@ -32,7 +33,14 @@ const AddService = () => {
             body:JSON.stringify(addService)
         })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            if (data.acknowledged) {
+                alert("AddService successfully")
+                form.reset();
+            }
+        })
+        
     }
     return (
         <section data-theme="aqua" className="p-6 my-6 rounded-lg  text-white">

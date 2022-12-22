@@ -65,9 +65,11 @@ const Login = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
-                        localStorage.setItem("dentrexatoken", data.token);
+                        alert('Login successfully')
                         if (user) {
                             navigate(from, { replace: true });
+                            localStorage.setItem('dentrexatoken', data.token);
+                           
                         }
                     })
 

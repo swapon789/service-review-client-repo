@@ -54,7 +54,6 @@ const Review = () => {
                             <Th>Patient</Th>
                             <Th>Discribe</Th>
                             <Th>Rating</Th>
-                            <Th>Update</Th>
                             <Th>Delete</Th>
                         </Tr>
                     </Thead>

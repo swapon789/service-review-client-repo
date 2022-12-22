@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import img from '../../Images/login 3.webp'
@@ -28,12 +29,13 @@ const Register = () => {
                 const user = result.user;
                 console.log(user)
                 setError('');
+                alert("regitration successfull")
                 form.reset();
                 if (user) {
                     navigate(from, { replace: true });
                 }
                 handleUpdateUserProfile(name, photoURL);
-
+                
             })
             .catch(e => {
                 console.error(e);
@@ -49,6 +51,7 @@ const Register = () => {
         updateUserProfile(profile)
             .then(() => { })
             .catch(error => console.error(error))
+            
     }
 
 
